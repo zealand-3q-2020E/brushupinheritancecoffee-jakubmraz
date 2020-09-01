@@ -4,8 +4,13 @@ using System.Text;
 
 namespace CoffeeShopConsoleApp
 {
-    class Cortado:Coffee
+    class Cortado:Coffee, IMilk
     {
+        public int MlMilk()
+        {
+            return 40;
+        }
+
         public override int Price()
         {
             return 25;
