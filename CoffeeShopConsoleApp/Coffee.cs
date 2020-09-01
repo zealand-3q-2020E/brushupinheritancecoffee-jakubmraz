@@ -7,17 +7,19 @@ namespace CoffeeShopConsoleApp
     /// <summary>
     /// A class that is used for coffe orders
     /// </summary>
-    public class Coffee
+    public abstract class Coffee
     {
         /// <summary>
-        /// returns the price of the coffee
+        /// returns the Price of the coffee
         /// It's possible to override this method, beacuse it is virtual 
         /// </summary>
         /// <returns>20 dkr</returns>
-        public virtual int price()
+        public virtual int Price()
         {
             return 20;
         }
+
+        public abstract string Strength();
 
     }
 }

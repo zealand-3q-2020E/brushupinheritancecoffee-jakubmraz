@@ -6,9 +6,14 @@ namespace CoffeeShopConsoleApp
 {
     class Cortado:Coffee
     {
-        public override int price()
+        public override int Price()
         {
             return 25;
+        }
+
+        public override string Strength()
+        {
+            return "Medium";
         }
     }
 }
