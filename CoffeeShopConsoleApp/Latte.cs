@@ -6,6 +6,16 @@ namespace CoffeeShopConsoleApp
 {
     class Latte:Coffee, IMilk
     {
+        public Latte(int discount) : base(discount)
+        {
+            if (discount < 5)
+            {
+                throw new Exception();
+            }
+
+            this.Discount = discount;
+        }
+
         public int MlMilk()
         {
             return 200;
@@ -13,7 +23,12 @@ namespace CoffeeShopConsoleApp
 
         public override int Price()
         {
-            return 40;
+            if (Discount < 5)
+            {
+                throw new Exception();
+            }
+
+            return 40 - Discount;
         }
 
         public override string Strength()
