@@ -12,9 +12,9 @@ namespace CoffeeShopConsoleApp
             // a list of all the orders for coffe in the coffee shop
             List<Coffee> orderList = new List<Coffee>()
             {
-                new BlackCoffee(),
-                new Cortado(),
-                new Latte()
+                new BlackCoffee(3),
+                new Cortado(4),
+                new Latte(0)
 
             };
 
