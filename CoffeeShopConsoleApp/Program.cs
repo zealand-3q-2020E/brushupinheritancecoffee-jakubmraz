@@ -18,6 +18,12 @@ namespace CoffeeShopConsoleApp
 
             };
 
+            List<IMilk> milkedCoffeeList = new List<IMilk>()
+            {
+                new Cortado(2),
+                new Latte(1),
+                new Latte(4)
+            };
 
             foreach (var coffee in orderList)
             {
