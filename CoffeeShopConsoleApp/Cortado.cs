@@ -6,12 +6,14 @@ namespace CoffeeShopConsoleApp
 {
     class Cortado:Coffee, IMilk
     {
-        public Cortado(int discount) : base(discount)
+        public Cortado(int discount, SpiceBlendEnum spiceBlend) : base(discount, spiceBlend)
         {
-            if (discount < 5)
+            if (discount > 5)
             {
                 throw new Exception();
             }
+
+            this.SpiceBlend = spiceBlend;
             this.Discount = discount;
         }
 

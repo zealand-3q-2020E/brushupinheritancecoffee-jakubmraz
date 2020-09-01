@@ -4,9 +4,9 @@ using System.Text;
 
 namespace CoffeeShopConsoleApp
 {
-    class Latte:Coffee, IMilk
+    class PumpkinSpiceLatte : Coffee, IMilk
     {
-        public Latte(int discount, SpiceBlendEnum spiceBlend) : base(discount, spiceBlend)
+        public PumpkinSpiceLatte(int discount, SpiceBlendEnum spiceBlend = SpiceBlendEnum.PUMPKIN) : base(discount, spiceBlend)
         {
             if (discount > 5)
             {
@@ -19,18 +19,17 @@ namespace CoffeeShopConsoleApp
 
         public int MlMilk()
         {
-            return 200;
-        }
-
-        public override int Price()
-        {
-
-            return 40 - Discount;
+            return 250;
         }
 
         public override string Strength()
         {
             return "Weak";
+        }
+
+        public override int Price()
+        {
+            return 70;
         }
     }
 }

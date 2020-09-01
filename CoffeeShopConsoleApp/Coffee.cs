@@ -9,9 +9,12 @@ namespace CoffeeShopConsoleApp
     /// </summary>
     public abstract class Coffee
     {
-        public Coffee(int discount)
+        public enum SpiceBlendEnum{ KIRITE, ESPRESSO, KIENI, PUMPKIN }
+        
+        public Coffee(int discount, SpiceBlendEnum spiceBlend)
         {
             this.Discount = discount;
+            this.SpiceBlend = spiceBlend;
         }
 
         /// <summary>
@@ -29,5 +32,6 @@ namespace CoffeeShopConsoleApp
 
         public int Discount { get; set; }
 
+        public SpiceBlendEnum SpiceBlend { get; set; }
     }
 }
