@@ -4,7 +4,7 @@ using System.Text;
 
 namespace CoffeeShopConsoleApp
 {
-    class PumpkinSpiceLatte : Coffee, IMilk
+    public class PumpkinSpiceLatte : Coffee, IMilk
     {
         public PumpkinSpiceLatte(int discount, SpiceBlendEnum spiceBlend = SpiceBlendEnum.PUMPKIN) : base(discount, spiceBlend)
         {
