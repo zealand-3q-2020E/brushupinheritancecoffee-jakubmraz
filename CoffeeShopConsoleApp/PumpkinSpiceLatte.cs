@@ -6,6 +6,11 @@ namespace CoffeeShopConsoleApp
 {
     public class PumpkinSpiceLatte : Coffee, IMilk
     {
+        public PumpkinSpiceLatte() : base()
+        {
+            this.SpiceBlend = SpiceBlendEnum.PUMPKIN;
+        }
+
         public PumpkinSpiceLatte(int discount, SpiceBlendEnum spiceBlend = SpiceBlendEnum.PUMPKIN) : base(discount, spiceBlend)
         {
             if (discount > 5)

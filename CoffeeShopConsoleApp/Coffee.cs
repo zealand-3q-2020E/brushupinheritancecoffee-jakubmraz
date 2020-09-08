@@ -10,7 +10,13 @@ namespace CoffeeShopConsoleApp
     public abstract class Coffee
     {
         public enum SpiceBlendEnum{ KIRITE, ESPRESSO, KIENI, PUMPKIN }
-        
+
+        //Empty constructor with default values to put into the constructor with parameters
+        public Coffee():this(0, SpiceBlendEnum.ESPRESSO)
+        {
+
+        }
+
         public Coffee(int discount, SpiceBlendEnum spiceBlend)
         {
             this.Discount = discount;

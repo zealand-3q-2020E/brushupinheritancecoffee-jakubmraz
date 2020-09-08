@@ -6,6 +6,11 @@ namespace CoffeeShopConsoleApp
 {
     public class BlackCoffee : Coffee
     {
+        public BlackCoffee() : base()
+        {
+
+        }
+
         public BlackCoffee(int discount, SpiceBlendEnum spiceBlend):base(discount, spiceBlend)
         {
             if (discount > 5)
