@@ -19,6 +19,15 @@ namespace CoffeeShopConsoleApp
 
         public Coffee(int discount, SpiceBlendEnum spiceBlend)
         {
+            if (discount > 5)
+            {
+                throw new ArgumentException("Discount cannot be more than 5kr.");
+            }
+            if (discount < 0)
+            {
+                throw new ArgumentException("Discount cannot be negative.");
+            }
+
             this.Discount = discount;
             this.SpiceBlend = spiceBlend;
         }

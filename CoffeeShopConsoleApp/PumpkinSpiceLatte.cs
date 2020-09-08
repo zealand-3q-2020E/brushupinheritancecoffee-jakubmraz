@@ -13,11 +13,6 @@ namespace CoffeeShopConsoleApp
 
         public PumpkinSpiceLatte(int discount, SpiceBlendEnum spiceBlend = SpiceBlendEnum.PUMPKIN) : base(discount, spiceBlend)
         {
-            if (discount > 5)
-            {
-                throw new Exception();
-            }
-
             this.SpiceBlend = spiceBlend;
             this.Discount = discount;
         }
